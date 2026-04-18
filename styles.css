@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf8f3;
+  color: #1f1f1f;
+}
+
+header {
+  background: #2f4f4f;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #e4e2db;
+}
+
+form,
+.filters {
+  display: grid;
+  gap: 0.7rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+select,
+button {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #c7c3b8;
+}
+
+button {
+  background: #e8b54d;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#book-list {
+  padding-left: 1rem;
+}
+
+#book-list li {
+  margin: 0.4rem 0;
+}

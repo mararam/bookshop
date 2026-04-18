@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookshop</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bookshop</h1>
+    <p>Affordable stories, surprise picks, and reading paths for everyone.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Support under-privileged readers</h2>
+      <p>Every purchase can add a donation that funds book kits for children and new readers.</p>
+      <label><input type="radio" name="support" checked /> Low-cost copy</label>
+      <label><input type="radio" name="support" /> Add donation</label>
+    </section>
+
+    <section>
+      <h2>Create your reader profile</h2>
+      <form id="profile-form">
+        <label>Name <input id="reader-name" type="text" required /></label>
+        <label>Age group
+          <select id="profile-age">
+            <option>6-9</option>
+            <option>10-13</option>
+            <option>14-17</option>
+            <option>18+</option>
+          </select>
+        </label>
+        <label>Reading level
+          <select id="profile-level">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </label>
+        <label>Interests
+          <select id="profile-interest">
+            <option>Adventure</option>
+            <option>Science</option>
+            <option>Fantasy</option>
+            <option>History</option>
+          </select>
+        </label>
+        <button type="submit">Save profile</button>
+      </form>
+      <p id="profile-status" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Search books and series</h2>
+      <label>Search by title, series, publisher, level, or author
+        <input id="search-input" type="search" placeholder="Try: River, Orion Press, Advanced..." />
+      </label>
+      <div class="filters">
+        <label>Age
+          <select id="age-filter">
+            <option value="">All</option>
+            <option value="6-9">6-9</option>
+            <option value="10-13">10-13</option>
+            <option value="14-17">14-17</option>
+            <option value="18+">18+</option>
+          </select>
+        </label>
+        <label>Level
+          <select id="level-filter">
+            <option value="">All</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </label>
+        <label>Interest
+          <select id="interest-filter">
+            <option value="">All</option>
+            <option>Adventure</option>
+            <option>Science</option>
+            <option>Fantasy</option>
+            <option>History</option>
+          </select>
+        </label>
+      </div>
+      <ul id="book-list"></ul>
+    </section>
+
+    <section>
+      <h2>AI interest book suggestions</h2>
+      <p>Pick your profile first, then get an AI-assisted recommendation.</p>
+      <button id="recommend-btn" type="button">Recommend for me</button>
+      <p id="recommendation" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Take online or offline copy</h2>
+      <p>Each book result includes copy choice for online reading or offline printed pickup.</p>
+    </section>
+
+    <section>
+      <h2>Surprise zone</h2>
+      <p>Need excitement? Tap for a random surprise pick.</p>
+      <button id="surprise-btn" type="button">Surprise me</button>
+      <p id="surprise-text" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Future books</h2>
+      <ul>
+        <li>Next Moon Mysteries — coming Jul 2026</li>
+        <li>Young Builders Lab 2 — coming Aug 2026</li>
+        <li>History in Comics: World Bridges — coming Sep 2026</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Make your own book</h2>
+      <form id="create-book-form">
+        <label>Book title <input id="new-title" type="text" required /></label>
+        <label>Main theme <input id="new-theme" type="text" required /></label>
+        <button type="submit">Create idea</button>
+      </form>
+      <p id="create-book-status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
